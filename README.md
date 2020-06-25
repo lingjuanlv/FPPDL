@@ -10,10 +10,12 @@ All logs will be dumped into folder "logs". Process log and analyze fairness as 
 1. X axis: standalone accuracy 
 grep "standalone" logs/fppdl_mnist_deep_p4e100_slevel01_imbalanced_IID1_pretrain1_localepoch5_localbatch10_lr0.15_run1_tpds.log >1.log
 awk '{print $NF}' ORS=', ' 1.log
+x=[0.8528, 0.8895, 0.7765, 0.8828]
 2. Y axis: final accuracy 
 grep "final test acc" logs/fppdl_mnist_deep_p4e100_slevel01_imbalanced_IID1_pretrain1_localepoch5_localbatch10_lr0.15_run1_tpds.log >1.log
 awk '{print $NF}' ORS=', ' 1.log
-3. Finally, using scipy.stats.pearsonr(x,y) to calculate fairness.
+y=[0.8874, 0.9191, 0.8158, 0.9118]
+3. Finally, using scipy.stats.pearsonr(x,y)=0.9996588631722703 to calculate fairness.
 ```
 
 # Requirements:
