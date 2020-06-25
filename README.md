@@ -1,5 +1,5 @@
 # FPPDL
-code for TPDS paper "Towards Fair and Privacy-Preserving Federated Deep Models"! Folder "dpgan" is used to generate DPGAN samples!
+code for TPDS paper "Towards Fair and Privacy-Preserving Federated Deep Models"! Folder "dpgan" is used to generate DPGAN samples on each party!
 
 # How to run:
 th fppdl_tpds.lua -dataset mnist -model deep -slevel 1 -imbalanced 1 -netSize 4 -nepochs 100 -local_nepochs 5 -batchSize 10 -learningRate 0.15 -taskID mnist_deep_p4e100_imbalanced -shardID mnist_p4_imbalanced -run run1 -pretrain 1 -credit_fade 1
